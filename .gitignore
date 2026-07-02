@@ -3,9 +3,10 @@
 
 # Production
 /build
+/node_modules/
 
 # Generated files
-.docusaurus
+.docusaurus/
 .cache-loader
 
 # Misc

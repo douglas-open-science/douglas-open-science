@@ -19,17 +19,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Scan Markdown Links
+      - name: Scan Markdown Links for Issues
         uses: lycheeverse/lychee-action@v2
         id: lychee
         with:
-          #args: --verbose --no-progress "docs/**/*.{md,mdx}" "README.md"
-          args: >-
-            --verbose 
-            --no-progress 
-            --require-text "body:!does not exist"
-            --require-text "body:!page you were looking for"
-            "docs/**/*.{md,mdx}" "README.md"
+          args: --verbose --no-progress "docs/**/*.{md,mdx}" "README.md"
           fail: false # Prevents the workflow from failing when it finds a broken link
 
       - name: Create Issue From Broken Links

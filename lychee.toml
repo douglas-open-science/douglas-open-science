@@ -1,0 +1,13 @@
+# lychee.toml
+
+# Core behaviors
+verbose = true
+no_progress = true
+
+# The criteria for treating a webpage body content text pattern as a failure.
+# This instructs Lychee to fail a URL if its HTML body contains these exact phrases.
+# (Note: In standard tool syntax, prefixing with '!' specifies a negative requirement).
+require_text = [
+    "body:!does not exist",
+    "body:!page you were looking for"
+]

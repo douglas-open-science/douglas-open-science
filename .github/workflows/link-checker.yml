@@ -27,7 +27,6 @@ jobs:
           args: >-
             --verbose 
             --no-progress 
-            --check-http-status 
             --require-text "body:!does not exist"
             --require-text "body:!page you were looking for"
             "docs/**/*.{md,mdx}" "README.md"

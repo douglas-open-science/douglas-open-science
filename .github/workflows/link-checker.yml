@@ -1,0 +1,37 @@
+name: Broken Link Checker
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Runs every Monday at midnight UTC to catch links that died externally
+    - cron: '0 0 * * 1'
+
+permissions:
+  issues: write  # gives the action permission to open a new issue
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Scan Markdown Links
+        uses: lycheeverse/lychee-action@v2
+        id: lychee
+        with:
+          args: --verbose --no-progress "docs/**/*.{md,mdx}" "README.md"
+          fail: false # Prevents the workflow from failing when it finds a broken link
+
+      - name: Create Issue From Broken Links
+        if: steps:lychee.outputs.exit_code != 0 # Only runs if lychee detected broken links
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🔗 Broken Links Detected"
+          content-filepath: ./lychee/out.md
+          labels: |
+            bug
+            automated-report

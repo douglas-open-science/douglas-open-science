@@ -28,3 +28,16 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* add a custom callout box style */
+.theme-admonition-guide {
+  background-color: rgba(37, 194, 160, 0.15) !important;
+  border: 1px solid rgb(37, 194, 160) !important;
+  border-left: 5px solid rgb(37, 194, 160) !important;
+  padding: 1.1rem !important;
+}
+
+/* text colors inside custom callout box */
+.theme-admonition-guide .admonitionHeading_Gvgb {
+  color: rgb(25, 130, 106);
+}

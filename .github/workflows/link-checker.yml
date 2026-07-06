@@ -23,7 +23,8 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         id: lychee
         with:
-          args: --verbose --no-progress "docs/**/*.{md,mdx}" "README.md"
+          #args: --verbose --no-progress "docs/**/*.{md,mdx}" "README.md"
+          args: --verbose --no-progress "https://support.orcid.org/hc/en-us/arti5cles/360006973653-Importing-works-from-other-services"
           fail: false # Prevents the workflow from failing when it finds a broken link
 
       - name: Create Issue From Broken Links

@@ -23,12 +23,29 @@ jobs:
         with:
           node-version: 20
 
+      # 1. Cache the global node_modules directory
+      - name: Cache Global Linkspector
+        id: cache-linkspector
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/lib/node_modules
+          key: ${{ runner.os }}-global-linkspector-0.5.5
+
+      # 2. Install only if a cache miss occurs
+      - name: Install Linkspector Globally
+        if: steps.cache-linkspector.outputs.cache-hit != 'true'
+        run: npm install -g @umbrelladocs/linkspector@0.5.5
+
+      # 3. Execute directly from the global path
+      - name: Run Linkspector
+        run: linkspector check
+
       - name: Run Linkspector and Capture Output
         id: linkspector
         # Run Linkspector via npm and pipe the terminal output to a text file.
         # The bash fallback prevents the workflow from crashing if broken links are found.
         run: |
-          npx @umbrelladocs/linkspector check > linkspector-report.txt || echo "links_failed=true" >> $GITHUB_ENV
+          npx @umbrelladocs/linkspector@0.5.5 check > linkspector-report.txt || echo "links_failed=true" >> $GITHUB_ENV
 
       - name: Format Issue Body
         if: env.links_failed == 'true'

@@ -9,7 +9,8 @@ on:
 
 jobs:
   check-links:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 
+    # ubuntu-latest results in sandbox error
     permissions:
       contents: read
       issues: write 

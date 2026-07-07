@@ -2,10 +2,10 @@ name: Linkspector Issue Creator
 on:
   push:
     branches:
-      - main # Change this to 'master' if that is your default branch
+      - main 
   schedule:
     - cron: '0 0 * * 1' 
-  workflow_dispatch: # Keeps the manual "Run workflow" button in the UI
+  workflow_dispatch: 
 
 jobs:
   check-links:
@@ -36,16 +36,13 @@ jobs:
         if: steps.cache-linkspector.outputs.cache-hit != 'true'
         run: npm install -g @umbrelladocs/linkspector@0.5.5
 
-      # 3. Execute directly from the global path
-      - name: Run Linkspector
-        run: linkspector check
-
+      # 3. Run Linkspector globally, capture output, and handle the exit code safely
       - name: Run Linkspector and Capture Output
         id: linkspector
-        # Run Linkspector via npm and pipe the terminal output to a text file.
-        # The bash fallback prevents the workflow from crashing if broken links are found.
         run: |
-          npx @umbrelladocs/linkspector@0.5.5 check > linkspector-report.txt || echo "links_failed=true" >> $GITHUB_ENV
+          # linkspector exits with 1 if broken links are found. 
+          # The || echo trick catches that exit code so the workflow keeps running.
+          linkspector check > linkspector-report.txt || echo "links_failed=true" >> $GITHUB_ENV
 
       - name: Format Issue Body
         if: env.links_failed == 'true'

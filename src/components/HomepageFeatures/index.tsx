@@ -11,32 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Find the right practices for you',
+    Svg: require('@site/static/img/undraw/undraw_ideas-flow_lwpa.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        At any stage of the research cycle, our guide contains ideas to make your project more open and impactful.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Get tailored guidance',
+    Svg: require('@site/static/img/undraw/undraw_open_book_mod_2.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The Douglas Open Science Team has curated these resources to help you navigate open science at our institution.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Facilitate collaboration',
+    Svg: require('@site/static/img/undraw/undraw_engineering-team_13ax.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Learn how incorporating open science practices can help make your research project more accessible to collaborators.
       </>
     ),
   },

@@ -20,8 +20,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/Persistent_Identifiers/">
-            Documentation on Open Science Practices ⏱️
+            to="/guide/Persistent_Identifiers/">
+            Check out the guide!
           </Link>
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Douglas Open Science Guide`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>

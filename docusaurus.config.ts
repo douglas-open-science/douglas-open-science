@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://m-miedema.github.io',
+  url: 'https://douglas-open-science.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/DOSP_guide_prototype/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'm-miedema', // Usually your GitHub org/user name.
-  projectName: 'DOSP_guide_prototype', // Usually your repo name.
+  organizationName: 'douglas-open-science', // Usually your GitHub org/user name.
+  projectName: 'douglas-open-science.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',

@@ -84,7 +84,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Douglas Open Science Guide',
+      title: 'Douglas Open Science Program',
       logo: {
         alt: 'Douglas Open Science Logo',
         src: 'img/OS_logo_no_text_square.svg',
@@ -112,41 +112,36 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Resources',
           items: [
             {
-              label: 'Documentation',
+              label: 'Open Science Guide',
               to: '/docs/Persistent_Identifiers/',
             },
           ],
         },
+        
         {
-          title: 'Community',
+          title: 'Useful links',
           items: [
+            
+            
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Open Science at the Douglas',
+              href: 'https://douglas.research.mcgill.ca/open-science-douglas',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Open Science GitHub',
+              href: 'https://github.com/douglas-open-science',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Need help?',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Send us an email',
+              href: 'mailto:open.science.ouverte.comtl@ssss.gouv.qc.ca',
             },
           ],
         },

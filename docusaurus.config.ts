@@ -62,6 +62,19 @@ const config: Config = {
     ],
   ],
 
+  // add open measures plug-in
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'open-measures-section', // Unique ID for the separate section
+        path: 'open-measures-content', // Directory where the content will live
+        routeBasePath: 'open-measures-registry', // URL route (e.g., mysite.com/special-section)
+        sidebarPath: './sidebarsRegistry.js',
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/OS_logo.png',

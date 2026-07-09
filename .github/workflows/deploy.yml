@@ -24,8 +24,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout main website
         uses: actions/checkout@v4
+
+      - name: Checkout Separate Section Content
+        uses: actions/checkout@v4
+        with:
+          repository: 'douglas-open-science/open-measures'
+          path: 'open-measures-content' # Must match the 'path' in config
 
       - name: Setup Node
         uses: actions/setup-node@v4

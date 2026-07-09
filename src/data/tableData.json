@@ -1,0 +1,18 @@
+[
+  {
+    "Abbreviation": "AUDIT",
+    "FullName": "Alcohol Use Disorders Identification Test",
+    "FR": "Y",
+    "ENG": "Y",
+    "Category": "Open",
+    "Link": "https://auditscreen.org/translations/"
+  },
+  {
+    "Abbreviation": "BPNSNF",
+    "FullName": "Basic Psychological Need Satisfaction and Frustration Scale",
+    "FR": "IHT",
+    "ENG": "Y",
+    "Category": "Available with permission",
+    "Link": "Brief Negative Symptom Scale: Psychometric Properties | Schizophrenia Bulletin | Oxford Academic"
+  }
+]

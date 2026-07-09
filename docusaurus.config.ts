@@ -73,6 +73,22 @@ const config: Config = {
         sidebarPath: './sidebarsRegistry.js',
       },
     ],
+
+
+  // allow local build to use symlinks
+  function disableSymlinkResolutionPlugin() {
+    return {
+      name: 'disable-symlink-resolution',
+      configureWebpack() {
+        return {
+          resolve: {
+            symlinks: false,
+          },
+        };
+      },
+    };
+  },
+
   ],
 
   themeConfig: {
@@ -110,6 +126,10 @@ const config: Config = {
             {
               label: 'Open Science Guide',
               to: '/guide/Persistent_Identifiers/',
+            },
+            {
+              label: 'Open Measures Registry',
+              to: '/open-measures-registry/',
             },
           ],
         },

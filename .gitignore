@@ -9,6 +9,14 @@
 .docusaurus/
 .cache-loader
 
+# Dynamic rules for stitched multi-instance docs 
+# This was implemented for symbolic link mapping to open measures repository to facilitate a local build
+*-content/
+sidebars*.js
+*_versions.json
+*_versioned_docs/
+*_versioned_sidebars/
+
 # Misc
 .DS_Store
 .env

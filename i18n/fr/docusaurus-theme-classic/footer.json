@@ -38,5 +38,37 @@
   "copyright": {
     "message": "Copyright © 2026 My Project, Inc. Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.title.Resources": {
+    "message": "Resources",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.Useful links": {
+    "message": "Useful links",
+    "description": "The title of the footer links column with title=Useful links in the footer"
+  },
+  "link.title.Need help?": {
+    "message": "Need help?",
+    "description": "The title of the footer links column with title=Need help? in the footer"
+  },
+  "link.item.label.Open Science Guide": {
+    "message": "Open Science Guide",
+    "description": "The label of footer link with label=Open Science Guide linking to /guide/Persistent_Identifiers/"
+  },
+  "link.item.label.Open Measures Registry": {
+    "message": "Open Measures Registry",
+    "description": "The label of footer link with label=Open Measures Registry linking to /open-measures-registry/"
+  },
+  "link.item.label.Open Science at the Douglas": {
+    "message": "Open Science at the Douglas",
+    "description": "The label of footer link with label=Open Science at the Douglas linking to https://douglas.research.mcgill.ca/open-science-douglas"
+  },
+  "link.item.label.Open Science GitHub": {
+    "message": "Open Science GitHub",
+    "description": "The label of footer link with label=Open Science GitHub linking to https://github.com/douglas-open-science"
+  },
+  "link.item.label.Send us an email": {
+    "message": "Send us an email",
+    "description": "The label of footer link with label=Send us an email linking to mailto:open.science.ouverte.comtl@ssss.gouv.qc.ca"
   }
 }

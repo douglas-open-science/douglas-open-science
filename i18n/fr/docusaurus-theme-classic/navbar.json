@@ -18,5 +18,9 @@
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.Open Science Guide": {
+    "message": "Open Science Guide",
+    "description": "Navbar item with label Open Science Guide"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.registrySidebar.category.Measure details": {
+    "message": "Measure details",
+    "description": "The label for category 'Measure details' in sidebar 'registrySidebar'"
+  },
+  "sidebar.registrySidebar.doc.Main Dashboard": {
+    "message": "Main Dashboard",
+    "description": "The label for the doc item 'Main Dashboard' in sidebar 'registrySidebar', linking to the doc index"
+  }
+}

@@ -9,3 +9,7 @@ baseUrl: "/"
 # You can ignore specific patterns if needed
 ignorePatterns:
   - pattern: "http://localhost:.*"
+  - pattern: "https://doi.org/*"
+  - pattern: "https://scicrunch.org/*"
+  - pattern: "https://rrid.site/*"
+  - pattern: "/doi/"

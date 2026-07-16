@@ -1,0 +1,9 @@
+services:
+  docusaurus:
+    image: node:22-alpine
+    ports:
+      - "3000:3000"
+    volumes:
+      - ..:/app:delegated
+    working_dir: /app/douglas-open-science
+    command: npm run start -- --host 0.0.0.0 --poll 1000

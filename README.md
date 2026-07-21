@@ -2,7 +2,8 @@
 
 ## Set up the site repositories
 Into the same parent directory, clone both *douglas-open-science* and *open-measures* repositories:
-```git clone https://github.com/douglas-open-science/douglas-open-science.git
+```
+git clone https://github.com/douglas-open-science/douglas-open-science.git
 git clone https://github.com/douglas-open-science/open-measures.git
 ```
 
@@ -16,12 +17,14 @@ Install Node.js (version 22 or higher)
 ### Option B: host via Docker image
 #### 1. Set up dependencies in your Docker image
 With your Docker Engine already running, run
-```docker compose run --rm docusaurus npm install
+```
+docker compose run --rm docusaurus npm install
 ```
 You will only need to re-run this command if a new dependency is added to `package.json`.
 #### 2. Set up your local server
 Run
-```docker compose up
+```
+docker compose up
 ```
 and wait for a message letting you know that http://localhost:3000/ is running. 
 

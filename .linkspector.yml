@@ -1,7 +1,7 @@
 # .linkspector.yml
 dirs:
-  - docs
-  - i18n\fr\docusaurus-plugin-content-docs\current
+  - docsNOTNOW
+  - "i18n/fr/docusaurus-plugin-content-docs/current"
 fileExtensions:
   - md
   - mdx

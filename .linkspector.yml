@@ -1,6 +1,7 @@
 # .linkspector.yml
 dirs:
-  - docs # Change this to the folder where your Markdown files are
+  - docs
+  - i18n\fr\docusaurus-plugin-content-docs
 fileExtensions:
   - md
   - mdx

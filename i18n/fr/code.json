@@ -325,5 +325,23 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.features.findtherightpractices.title": {
+    "message": "Trouver les pratiques qui vous conviennent le mieux"
+  },
+  "homepage.features.findtherightpractices.description": {
+    "message": "À n’importe quelle étape du cycle de recherche, notre guide propose des idées pour rendre votre projet plus ouvert et lui donner davantage d’impact."
+  },
+  "homepage.features.gettailoredguidance.title": {
+    "message": "Bénéficier de conseils personnalisés"
+  },
+  "homepage.features.gettailoredguidance.description": {
+    "message": "L’équipe de science ouverte du Douglas a sélectionné ces ressources afin de vous aider à vous orienter dans le domaine de la science ouverte au sein de notre établissement."
+  },
+  "homepage.features.facilitatecollaboration.title": {
+    "message": "Favoriser la collaboration"
+  },
+  "homepage.features.facilitatecollaboration.description": {
+    "message": "Découvrir comment l'adoption de pratiques de science ouverte peut contribuer à rendre votre projet de recherche plus accessible à vos collaborateurs."
   }
 }

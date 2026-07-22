@@ -7,20 +7,8 @@
     "message": "Douglas Open Science Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Tutorial": {
-    "message": "Tutorial",
-    "description": "Navbar item with label Tutorial"
-  },
-  "item.label.Blog": {
-    "message": "Blog",
-    "description": "Navbar item with label Blog"
-  },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
-  },
   "item.label.Open Science Guide": {
-    "message": "Open Science Guide",
+    "message": "Guide sur la science ouverte",
     "description": "Navbar item with label Open Science Guide"
   }
 }

@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import Translate from '@docusaurus/Translate';
 
 import styles from './index.module.css';
 
@@ -21,7 +22,11 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/guide/Persistent_Identifiers/">
-            Check out the guide!
+            <Translate
+          id="homepage.button.getStarted"
+          description="The primary action button on the homepage hero banner">
+          Check out the guide!
+        </Translate>
           </Link>
         </div>
       </div>

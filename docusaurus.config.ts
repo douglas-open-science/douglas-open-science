@@ -4,9 +4,23 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+function getSiteTagline() {
+  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
+    case 'fr': return 'Bienvenue dans notre guide sur la mise en pratique de la science ouverte au Douglas';
+    default: return 'Welcome to our guide to practicing open science at the Douglas';
+  }
+}
+
+function getSiteTitle() {
+  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
+    case 'fr': return 'La science ouverte dans la recherche en santé mentale';
+    default: return 'Open Science in Mental Health Research';
+  }
+}
+
 const config: Config = {
-  title: 'Open Science in Mental Health Research',
-  tagline: 'Welcome to our guide to practicing open science at the Douglas',
+  title: getSiteTitle(),
+  tagline: getSiteTagline(),
   favicon: 'img/OS_icon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

@@ -343,5 +343,9 @@
   },
   "homepage.features.facilitatecollaboration.description": {
     "message": "Découvrir comment l'adoption de pratiques de science ouverte peut contribuer à rendre votre projet de recherche plus accessible à vos collaborateurs."
+  },
+  "homepage.button.getStarted": {
+    "message": "Consultez le guide !",
+    "description": "The primary action button on the homepage hero banner"
   }
 }

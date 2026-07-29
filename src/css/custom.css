@@ -55,3 +55,25 @@
   /* font-weight: 600; */
   color: var(--ifm-color-primary-light); 
 }
+
+/* ensure vertical centering of button text*/
+.button p,
+a.button p {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: inherit !important;
+}
+
+/* Light Mode - Target primary buttons specifically */
+html body .button--primary {
+  /* Re-directing to a predefined Infima dark gray for light mode */
+  background-color: var(--ifm-color-primary-darker) !important;
+  color: var(--ifm-color-white) !important; 
+}
+
+/* Dark Mode - Target primary buttons specifically */
+html[data-theme='dark'] body .button--primary {
+  /* Re-directing to predefined Infima white for dark mode */
+  background-color: var(--ifm-color-primary) !important;
+  color: var(--ifm-color-white) !important; 
+}

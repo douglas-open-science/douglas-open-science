@@ -65,8 +65,8 @@ const config: Config = {
           },
           routeBasePath:'guide',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Enable pages to show the last update time
+          showLastUpdateTime: true,
         },
         blog: false,
         theme: {

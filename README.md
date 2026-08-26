@@ -1,27 +1,33 @@
-# Instructions for local development of website
+## Attribution & Citation
 
-## Set up the site repositories
+If you use or adapt this work, please cite it as:
+
+> **Douglas Open Science Guide** © 2026 by the Douglas Open Science Program is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Original source: [https://github.com/douglas-open-science/douglas-open-science](http://github.com/douglas-open-science/douglas-open-science/).
+
+## Instructions for local development of website
+
+### Set up the site repositories
 Into the same parent directory, clone both *douglas-open-science* and *open-measures* repositories:
 ```
 git clone https://github.com/douglas-open-science/douglas-open-science.git
 git clone https://github.com/douglas-open-science/open-measures.git
 ```
 
-## Host the site
+### Host the site
 
-### Option A: host via local install of Node.js
+#### Option A: host via local install of Node.js
 Install Node.js (version 22 or higher)
 
 *further support for hosting via direct installation coming soon*
 
-### Option B: host via Docker image
-#### 1. Set up dependencies in your Docker image
+#### Option B: host via Docker image
+##### 1. Set up dependencies in your Docker image
 With your Docker Engine already running, run
 ```
 docker compose run --rm docusaurus npm install
 ```
 You will only need to re-run this command if a new dependency is added to `package.json`.
-#### 2. Set up your local server
+##### 2. Set up your local server
 Run
 ```
 docker compose up
@@ -33,4 +39,4 @@ Navigate to http://localhost:3000/ in your browser: you should be able to see an
 
 If you make local edits, you should see them reflected in the site as long as the local server is running. However, please note that the site may update slowly when hosted via Docker image.
 
-*support for hosting the translated version of the site coming soon*
+*Support for hosting the translated version of the site coming soon!*

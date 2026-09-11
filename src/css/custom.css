@@ -77,3 +77,9 @@ html[data-theme='dark'] body .button--primary {
   background-color: var(--ifm-color-primary) !important;
   color: var(--ifm-color-white) !important; 
 }
+
+/* Hide the CTRL+K / CMD+K keyboard shortcut hint in the search bar */
+.DocSearch-Button-Keys,
+.navbar__search kbd {
+  display: none !important;
+}

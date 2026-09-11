@@ -87,6 +87,19 @@ const config: Config = {
         sidebarPath: './sidebarsRegistry.js',
       },
     ],
+    [
+      'docusaurus-plugin-pagefind',
+      {
+        // Optional: Tells Pagefind to ignore the navbar and footer so 
+        // navigation links don't show up in search results for every page.
+        excludeSelectors: [
+          'footer',
+          '.navbar',
+          '.pagination-nav',
+          '.toc-inline' // Exclude table of contents
+        ],
+      },
+    ],
 
 
   // allow local build to use symlinks

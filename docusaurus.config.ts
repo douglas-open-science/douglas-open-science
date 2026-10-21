@@ -118,6 +118,18 @@ const config: Config = {
 
   ],
 
+  // ANALYTICS WITH UMAMI
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        defer: 'true',
+        src: 'https://cloud.umami.is/script.js',
+        'data-website-id': 'a7741638-ac8c-4b16-a954-ce55e4be4dc9', 
+      },
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/OS_logo.png',

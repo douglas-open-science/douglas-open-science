@@ -2,8 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 const MAIN_SITE = __dirname;
-// Adjust this relative path if Github repos aren't in the same parent
-const SEPARATE_REPO = path.resolve(MAIN_SITE, '../open-measures-content'); 
+
+// Check if running in GitHub Actions
+const isCI = process.env.CI === 'true';
+
+// Use appropriate local or GitHub Actions paths
+const SEPARATE_REPO = isCI 
+  ? path.join(__dirname, 'open-measures-content') 
+  : path.join(__dirname, '../open-measures');
 
 const IGNORE_LIST = new Set([
   '.git',

@@ -1,7 +1,29 @@
 const fs = require('fs');
 const path = require('path');
 
-const CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
+// TEMPORARY LOGGING
+console.log('🔍 [DEBUG] Current Working Directory (cwd):', process.cwd());
+console.log('🔍 [DEBUG] Script Directory (__dirname):', __dirname);
+console.log('🔍 [DEBUG] Running in CI environment?', isCI);
+
+// Check if running in GitHub Actions
+const isCI = process.env.CI === 'true';
+
+//const CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
+let CSV_PATH;
+
+if (isCI) {
+  // In GitHub Actions, check root-level checkout (and fallback to nested if the repo has an inner folder)
+  const primaryCIPath = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
+  const nestedCIPath = path.join(__dirname, '../open-measures-content/open-measures-content/Tools-example-table - Sheet1.csv');
+  console.log('🔍 [DEBUG] Checking CI candidate 1:', primaryCIPath, '-> Exists?', fs.existsSync(primaryCIPath));
+  console.log('🔍 [DEBUG] Checking CI candidate 2:', nestedCIPath, '-> Exists?', fs.existsSync(nestedCIPath));
+  CSV_PATH = fs.existsSync(primaryCIPath) ? primaryCIPath : nestedCIPath;
+} else {
+  CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
+}
+
+
 const JSON_OUTPUT_PATH = path.join(__dirname, '../src/data/tableData.json');
 
 // A robust CSV state-machine parser to handle commas trapped inside quotes

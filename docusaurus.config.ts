@@ -126,6 +126,7 @@ const config: Config = {
         defer: 'true',
         src: 'https://cloud.umami.is/script.js',
         'data-website-id': 'a7741638-ac8c-4b16-a954-ce55e4be4dc9', 
+        'data-domains': 'douglas-open-science.github.io',
       },
     },
   ],

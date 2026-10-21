@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
+// Check if running in GitHub Actions
+const isCI = process.env.CI === 'true';
+
 // TEMPORARY LOGGING
 console.log('🔍 [DEBUG] Current Working Directory (cwd):', process.cwd());
 console.log('🔍 [DEBUG] Script Directory (__dirname):', __dirname);
 console.log('🔍 [DEBUG] Running in CI environment?', isCI);
-
-// Check if running in GitHub Actions
-const isCI = process.env.CI === 'true';
 
 //const CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
 let CSV_PATH;

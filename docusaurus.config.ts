@@ -32,12 +32,12 @@ const config: Config = {
   url: 'https://douglas-open-science.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/douglas-open-science/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'douglas-open-science', // Usually your GitHub org/user name.
-  projectName: 'douglas-open-science.github.io', // Usually your repo name.
+  projectName: 'douglas-open-science', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',

@@ -3,7 +3,7 @@ const path = require('path');
 
 const MAIN_SITE = __dirname;
 // Adjust this relative path if Github repos aren't in the same parent
-const SEPARATE_REPO = path.resolve(MAIN_SITE, '../open-measures'); 
+const SEPARATE_REPO = path.resolve(MAIN_SITE, '../open-measures-content'); 
 
 const IGNORE_LIST = new Set([
   '.git',

@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'douglas-open-science/open-measures'
-          path: './open-measures-content' # Must match the 'path' in config
+          path: './open-measures-temp' # Must match the 'path' in config (???)
 
       - name: Setup Node
         uses: actions/setup-node@v4

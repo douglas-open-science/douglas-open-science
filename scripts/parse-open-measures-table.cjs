@@ -13,12 +13,7 @@ console.log('🔍 [DEBUG] Running in CI environment?', isCI);
 let CSV_PATH;
 
 if (isCI) {
-  // In GitHub Actions, check root-level checkout (and fallback to nested if the repo has an inner folder)
-  const primaryCIPath = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
-  const nestedCIPath = path.join(__dirname, '../open-measures-content/open-measures-content/Tools-example-table - Sheet1.csv');
-  console.log('🔍 [DEBUG] Checking CI candidate 1:', primaryCIPath, '-> Exists?', fs.existsSync(primaryCIPath));
-  console.log('🔍 [DEBUG] Checking CI candidate 2:', nestedCIPath, '-> Exists?', fs.existsSync(nestedCIPath));
-  CSV_PATH = fs.existsSync(primaryCIPath) ? primaryCIPath : nestedCIPath;
+  CSV_PATH = path.join(__dirname, '../open-measures-temp/open-measures-content/Tools-example-table - Sheet1.csv');
 } else {
   CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
 }

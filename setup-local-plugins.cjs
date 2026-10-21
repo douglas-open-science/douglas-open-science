@@ -8,7 +8,7 @@ const isCI = process.env.CI === 'true';
 
 // Use appropriate local or GitHub Actions paths
 const SEPARATE_REPO = isCI 
-  ? path.join(__dirname, './open-measures-content') 
+  ? path.join(__dirname, './open-measures-temp') 
   : path.join(__dirname, '../open-measures');
 
 const IGNORE_LIST = new Set([
@@ -17,9 +17,10 @@ const IGNORE_LIST = new Set([
   '.github',
   'node_modules',
   'README.md',
-  '.DS_Store',
-  ...(isCI ? ['open-measures-content'] : [])
+  '.DS_Store'
 ]);
+
+//  ...(isCI ? ['open-measures-content'] : [])
 
 function setupDynamicLinks() {
   if (!fs.existsSync(SEPARATE_REPO)) {

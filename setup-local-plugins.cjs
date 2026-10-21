@@ -8,7 +8,7 @@ const isCI = process.env.CI === 'true';
 
 // Use appropriate local or GitHub Actions paths
 const SEPARATE_REPO = isCI 
-  ? path.join(__dirname, 'open-measures-content') 
+  ? path.join(__dirname, '../open-measures-content') 
   : path.join(__dirname, '../open-measures');
 
 const IGNORE_LIST = new Set([

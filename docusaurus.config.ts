@@ -154,10 +154,6 @@ const config: Config = {
               label: 'Open Science Guide',
               to: '/guide/Persistent_Identifiers/',
             },
-            {
-              label: 'Open Measures Registry',
-              to: '/open-measures-registry/',
-            },
           ],
         },
         

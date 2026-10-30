@@ -145,8 +145,7 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/guide/',
           position: 'left',
           label: 'Open Science Guide',
         },
@@ -165,7 +164,7 @@ const config: Config = {
           items: [
             {
               label: 'Open Science Guide',
-              to: '/guide/Persistent_Identifiers/',
+              to: '/guide/',
             },
           ],
         },

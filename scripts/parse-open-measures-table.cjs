@@ -1,7 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 
-const CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
+// Check if running in GitHub Actions
+const isCI = process.env.CI === 'true';
+
+// TEMPORARY LOGGING
+console.log('🔍 [DEBUG] Current Working Directory (cwd):', process.cwd());
+console.log('🔍 [DEBUG] Script Directory (__dirname):', __dirname);
+console.log('🔍 [DEBUG] Running in CI environment?', isCI);
+
+//const CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
+let CSV_PATH;
+
+if (isCI) {
+  CSV_PATH = path.join(__dirname, '../open-measures-temp/open-measures-content/Tools-example-table - Sheet1.csv');
+} else {
+  CSV_PATH = path.join(__dirname, '../open-measures-content/Tools-example-table - Sheet1.csv');
+}
+
+
 const JSON_OUTPUT_PATH = path.join(__dirname, '../src/data/tableData.json');
 
 // A robust CSV state-machine parser to handle commas trapped inside quotes

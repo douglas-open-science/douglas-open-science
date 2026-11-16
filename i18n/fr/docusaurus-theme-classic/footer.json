@@ -17,7 +17,7 @@
   },
   "link.item.label.Open Science Guide": {
     "message": "Guide sur la science ouverte",
-    "description": "The label of footer link with label=Open Science Guide linking to /guide/Persistent_Identifiers/"
+    "description": "The label of footer link with label=Open Science Guide linking to /guide/"
   },
   "link.item.label.Open Measures Registry": {
     "message": "Open Measures Registry",

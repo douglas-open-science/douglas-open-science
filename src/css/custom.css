@@ -83,3 +83,25 @@ html[data-theme='dark'] body .button--primary {
 .navbar__search kbd {
   display: none !important;
 }
+
+/* ADDING A LANDING PAGE TO DOCS */
+
+.hidden {
+  display: none !important;
+}
+
+/* Force description text to span exactly up to two lines */
+.custom-card-list .card p, 
+[class*='cardDescription'] {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Change this to allow exactly 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal; /* Overrides the default 1-line truncate behavior */
+  text-overflow: ellipsis;
+}
+
+/* Completely hides the folder/document icon inside DocCardList preview cards */
+.theme-doc-card-icon {
+  display: none !important;
+}

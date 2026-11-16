@@ -3,8 +3,12 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Les identifiants pérennes": {
+  "sidebar.tutorialSidebar.category.Open Access Publishing": {
+    "message": "La publication en libre accès",
+    "description": "The label for category 'Open Access Publishing' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Persistent Identifiers": {
     "message": "Les identifiants pérennes",
-    "description": "The label for category 'Les identifiants pérennes' in sidebar 'tutorialSidebar'"
+    "description": "The label for category 'Persistent Identifiers' in sidebar 'tutorialSidebar'"
   }
 }

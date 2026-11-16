@@ -21,7 +21,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/guide/Persistent_Identifiers/">
+            to="/guide/">
             <Translate
           id="homepage.button.getStarted"
           description="The primary action button on the homepage hero banner">

@@ -32,12 +32,12 @@ const config: Config = {
   url: 'https://douglas-open-science.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/douglas-open-science/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'douglas-open-science', // Usually your GitHub org/user name.
-  projectName: 'douglas-open-science.github.io', // Usually your repo name.
+  projectName: 'douglas-open-science', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
@@ -118,6 +118,19 @@ const config: Config = {
 
   ],
 
+  // ANALYTICS WITH UMAMI
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        defer: 'true',
+        src: 'https://cloud.umami.is/script.js',
+        'data-website-id': 'a7741638-ac8c-4b16-a954-ce55e4be4dc9', 
+        'data-domains': 'douglas-open-science.github.io',
+      },
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/OS_logo.png',
@@ -132,8 +145,7 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/guide/',
           position: 'left',
           label: 'Open Science Guide',
         },
@@ -152,11 +164,7 @@ const config: Config = {
           items: [
             {
               label: 'Open Science Guide',
-              to: '/guide/Persistent_Identifiers/',
-            },
-            {
-              label: 'Open Measures Registry',
-              to: '/open-measures-registry/',
+              to: '/guide/',
             },
           ],
         },

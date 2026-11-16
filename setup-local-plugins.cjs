@@ -2,8 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 const MAIN_SITE = __dirname;
-// Adjust this relative path if Github repos aren't in the same parent
-const SEPARATE_REPO = path.resolve(MAIN_SITE, '../open-measures'); 
+
+// Check if running in GitHub Actions
+const isCI = process.env.CI === 'true';
+
+// Use appropriate local or GitHub Actions paths
+const SEPARATE_REPO = isCI 
+  ? path.join(__dirname, './open-measures-temp') 
+  : path.join(__dirname, '../open-measures');
 
 const IGNORE_LIST = new Set([
   '.git',
@@ -13,6 +19,8 @@ const IGNORE_LIST = new Set([
   'README.md',
   '.DS_Store'
 ]);
+
+//  ...(isCI ? ['open-measures-content'] : [])
 
 function setupDynamicLinks() {
   if (!fs.existsSync(SEPARATE_REPO)) {

@@ -10,5 +10,9 @@
   "sidebar.tutorialSidebar.category.Persistent Identifiers": {
     "message": "Les identifiants pérennes",
     "description": "The label for category 'Persistent Identifiers' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Open Methods": {
+    "message": "Les méthodes ouvertes",
+    "description": "The label for category 'Open Methods' in sidebar 'tutorialSidebar'"
   }
 }
